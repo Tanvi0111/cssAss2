@@ -1,0 +1,127 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right, #eab4b4, #26425f);
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    height: 100vh; /* Ensure the body fills the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure header and footer have space */
+}
+
+/* Ensure header is always fully visible and doesn't get cut off */
+header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #d4af37;
+    padding: 40px 20px; /* Increased padding for more space */
+    border-bottom: 2px solid #d4af37;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    min-height: 15vh; /* Guarantees the header is visible */
+    width: 100%; /* Makes sure the header spans the full width */
+}
+
+/* Add responsive font sizes for header to adapt to smaller screens */
+header h1 {
+    font-size: 3em; /* Default for large screens */
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Styling for the lyrics section */
+/* Styling for the lyrics section with a new background color */
+.lyrics {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2em;
+    text-align: center;
+    margin: 50px auto;
+    color: #b7201d; /* Soft pinkish color for the text */
+    width: 80%;
+    line-height: 1.8;
+    padding: 20px;
+
+    /* Cohesive background color */
+    background-color: rgba(255, 255, 255, 0.1); /* Very light with transparency */
+    
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
+}
+
+
+/* Individual lyric styling */
+.lyrics p {
+    margin: 15px 0;
+    font-weight: 400;
+}
+
+/* Highlighted styling for chorus/repetition */
+.lyrics p:nth-of-type(3),
+.lyrics p:nth-of-type(4) {
+    font-size: 2.5em;
+    color: #910505; /* Bolder color for emphasis */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #d4af37;
+    border-top: 2px solid #000000;
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+/* Footer text adjustments */
+footer p {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+/* Media query to make the page responsive */
+@media (max-width: 768px) {
+    /* Adjust header font size for smaller screens */
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1.2em;
+    }
+
+    /* Adjust lyric section for smaller screens */
+    .lyrics {
+        font-size: 1.8em;
+        padding: 15px;
+        width: 90%; /* Increased width for better readability on small screens */
+    }
+
+    /* Adjust footer text for smaller screens */
+    footer p {
+        font-size: 0.9em;
+    }
+}
